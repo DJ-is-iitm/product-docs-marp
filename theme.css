@@ -1,0 +1,53 @@
+/* @theme product-docs */
+@charset "UTF-8";
+
+/* Base Marp theme as a starting point (works in Marp CLI / VS Code extension) */
+@import 'default';
+
+:root {
+  --bg-dark: #0b132b;
+  --bg-darker: #1c2541;
+  --fg: #f5f7ff;
+  --fg-muted: #c9d1e7;
+  --brand: #4da3ff;
+  --code-bg: rgba(255,255,255,0.08);
+  --table-border: rgba(255,255,255,0.25);
+}
+
+section {
+  background: var(--bg-dark);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+h1, h2, h3 { color: var(--fg); }
+a { color: var(--brand); text-decoration: none; }
+
+pre, code {
+  background: var(--code-bg);
+  border-radius: 8px;
+  padding: 0.25rem 0.5rem;
+}
+
+table { border-collapse: collapse; }
+table th, table td {
+  border: 1px solid var(--table-border);
+  padding: 6px 10px;
+}
+
+/* Slide variants used by _class directives */
+section.lead {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+}
+section.invert {
+  background: #ffffff;
+  color: #111111;
+}
+section.invert h1, section.invert h2, section.invert h3 { color: #111111; }
+section.invert pre, section.invert code { background: #f3f3f3; }
+
+/* Footer / page number readability */
+footer {
+  color: var(--fg-muted);
+  font-size: 0.8rem;
+}
